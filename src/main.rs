@@ -26,7 +26,7 @@ use photo_filters::{
     rotate,
     invert,
     grayscale,
-    generate,
+    generate_color,
     gradient,
     fractal,
     CropPayload,
@@ -160,8 +160,8 @@ fn main() {
         }
 
         // **OPTION**
-        // Generate -- see the generate() function below -- this should be sort of like "fractal()"!
-        "generate" => {
+        // Generate Color -- see the generate_color() function below -- this should be sort of like "fractal()"!
+        "generate_color" => {
             if args.len() != 4 {
                 print_usage_and_exit();
             }
@@ -171,7 +171,7 @@ fn main() {
                 blue: args.remove(0).parse().unwrap(),
                 green: args.remove(0).parse().unwrap()
             };
-            generate(rgb_color, outfile);
+            generate_color(rgb_color, outfile);
         }
 
         "gradient" => {

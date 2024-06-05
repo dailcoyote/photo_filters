@@ -77,7 +77,7 @@ pub fn grayscale(source: &DynamicImage) -> DynamicImage {
     return source.grayscale();
 }
 
-pub fn generate(rgb_color: RGBColor, outfile: String) {
+pub fn generate_color(rgb_color: RGBColor, outfile: String) {
     // Create an ImageBuffer -- see fractal() for an example
     let width = 1000;
     let height = 1000;
